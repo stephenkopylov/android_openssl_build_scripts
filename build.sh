@@ -18,7 +18,7 @@ CC=clang
 PATH=$toolchains_path/bin:$PATH
 
 # Set the Android API levels
-ANDROID_API=API_V
+ANDROID_API=$API_V
 
 # Set the target architecture
 # Can be android-arm, android-arm64, android-x86, android-x86 etc
@@ -35,7 +35,7 @@ make clean
 make
 
 # Copy the outputs
-OUTPUT_INCLUDE=$SCRIPTPATH/output/include/${architecture}
+OUTPUT_INCLUDE=$SCRIPTPATH/output/include/
 OUTPUT_LIB=$SCRIPTPATH/output/lib/${OUTPUT_ARC}
 mkdir -p $OUTPUT_INCLUDE
 mkdir -p $OUTPUT_LIB
