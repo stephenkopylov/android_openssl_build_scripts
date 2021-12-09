@@ -8,14 +8,14 @@ SCRIPTPATH=`realpath .`
 OPENSSL_DIR=$SCRIPTPATH/openssl-1.1.1l
 
 # Find the toolchain for your build machine
-toolchains_path=$(python toolchains_path.py --ndk ${ANDROID_NDK_HOME})
+# toolchains_path=$(python toolchains_path.py --ndk ${ANDROID_NDK_HOME})
 
 # Configure the OpenSSL environment, refer to NOTES.ANDROID in OPENSSL_DIR
 # Set compiler clang, instead of gcc by default
 CC=clang
 
 # Add toolchains bin directory to PATH
-PATH=$toolchains_path/bin:$PATH
+PATH=$TOOLCHAIN_PATH/bin:$PATH
 
 # Set the Android API levels
 ANDROID_API=$API_V
