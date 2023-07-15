@@ -5,7 +5,7 @@ if [ "$NDK_VERSION" == "" ];then
    set -e
 fi
 
-TOOLCHAIN_PATH=$(python toolchains_path.py --ndk $ANDROID_HOME/ndk/${NDK_VERSION})
+TOOLCHAIN_PATH=$(python3 toolchains_path.py --ndk $ANDROID_HOME/ndk/${NDK_VERSION})
 
 if [ "$TOOLCHAIN_PATH" == "" ];then
    echo "Error! Can't find proper toolchain. Wrong NDK version or ANDROID_HOME not set"
